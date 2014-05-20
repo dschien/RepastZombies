@@ -13,7 +13,11 @@ import repast.simphony.relogo.schedule.Setup;
 import zombietutorial.ReLogoTurtle
 
 
-
+/**
+ * 
+ * @author schien
+ *
+ */
 class Human extends ReLogoTurtle {
 
 	def infected = false
