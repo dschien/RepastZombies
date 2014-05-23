@@ -666,6 +666,62 @@ public class ReLogoPatch extends BasePatch{
 	}
 
 	/**
+	 * Queries if object is a infection.
+	 * 
+	 * @param o
+	 *            an object
+	 * @return true or false based on whether the object is a infection
+	 */
+	@ReLogoBuilderGeneratedFor("zombietutorial.relogo.Infection")
+	public boolean isInfectionQ(Object o){
+		return (o instanceof zombietutorial.relogo.Infection);
+	}
+
+	/**
+	 * Returns an agentset containing all infections.
+	 * 
+	 * @return agentset of all infections
+	 */
+	@ReLogoBuilderGeneratedFor("zombietutorial.relogo.Infection")
+	public AgentSet<zombietutorial.relogo.Infection> infections(){
+		AgentSet<zombietutorial.relogo.Infection> a = new AgentSet<zombietutorial.relogo.Infection>();
+		for (Object e : this.getMyObserver().getContext().getObjects(zombietutorial.relogo.Infection.class)) {
+			if (e instanceof zombietutorial.relogo.Infection){
+				a.add((zombietutorial.relogo.Infection)e);
+			}
+		}
+		return a;
+	}
+
+	/**
+	 * Returns the infection between two turtles.
+	 * 
+	 * @param oneEnd
+	 *            an integer
+	 * @param otherEnd
+	 *            an integer
+	 * @return infection between two turtles
+	 */
+	@ReLogoBuilderGeneratedFor("zombietutorial.relogo.Infection")
+	public zombietutorial.relogo.Infection infection(Number oneEnd, Number otherEnd) {
+		return (zombietutorial.relogo.Infection)(this.getMyObserver().getNetwork("Infection").getEdge(turtle(oneEnd),turtle(otherEnd)));
+	}
+
+	/**
+	 * Returns the infection between two turtles.
+	 * 
+	 * @param oneEnd
+	 *            a turtle
+	 * @param otherEnd
+	 *            a turtle
+	 * @return infection between two turtles
+	 */
+	@ReLogoBuilderGeneratedFor("zombietutorial.relogo.Infection")
+	public zombietutorial.relogo.Infection infection(Turtle oneEnd, Turtle otherEnd) {
+		return infection(oneEnd.getWho(), otherEnd.getWho());
+	}
+
+	/**
 	 * Returns the value of the global variable numHumans.
 	 *
 	 * @return the value of the global variable numHumans
@@ -705,6 +761,27 @@ public class ReLogoPatch extends BasePatch{
 	@ReLogoBuilderGeneratedFor("global: numZombies")
 	public void setNumZombies(Object value){
 		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("numZombies",value);
+	}
+
+	/**
+	 * Returns the value of the global variable gestationPeriod.
+	 *
+	 * @return the value of the global variable gestationPeriod
+	 */
+	@ReLogoBuilderGeneratedFor("global: gestationPeriod")
+	public Object getGestationPeriod(){
+		return repast.simphony.relogo.ReLogoModel.getInstance().getModelParam("gestationPeriod");
+	}
+
+	/**
+	 * Sets the value of the global variable gestationPeriod.
+	 *
+	 * @param value
+	 *            a value
+	 */
+	@ReLogoBuilderGeneratedFor("global: gestationPeriod")
+	public void setGestationPeriod(Object value){
+		repast.simphony.relogo.ReLogoModel.getInstance().setModelParam("gestationPeriod",value);
 	}
 
 

@@ -3,14 +3,18 @@
   <hashtable>
     <default>
       <loadFactor>0.75</loadFactor>
-      <threshold>5</threshold>
+      <threshold>8</threshold>
     </default>
-    <int>7</int>
-    <int>3</int>
+    <int>11</int>
+    <int>5</int>
     <string>SettingsRegistryId</string>
     <string>Repast.registry</string>
+    <string>Spreadsheet.licenseAccepted</string>
+    <boolean>true</boolean>
     <string>LastLoadedScenario</string>
-    <string>/Users/schien/workspaces/symphony/ZombieTutorial/ZombieTutorial.rs</string>
+    <string>/Users/schien/git/RepastZombie/ZombieTutorial/ZombieTutorial.rs</string>
+    <string>Spreadsheet.home</string>
+    <string>/Applications/Microsoft Office 2011/Microsoft Excel.app</string>
     <string>SettingsFileName</string>
     <string>Repast.settings</string>
   </hashtable>

@@ -1,6 +1,6 @@
 package zombietutorial.relogo
 
-import static repast.simphony.relogo.Utility.*; 
+import static repast.simphony.relogo.Utility.*;
 import static repast.simphony.relogo.UtilityG.*;
 import repast.simphony.relogo.BasePatch;
 import repast.simphony.relogo.BaseTurtle;
@@ -26,7 +26,9 @@ class Zombie extends ReLogoTurtle {
 
 		if ( count ( humansHere ()) > 0){
 			label = "Brains!"
-			infect ( oneOf ( humansHere ()))
+			def infectee = oneOf ( humansHere ())
+			infect ( infectee )
+			createInfectionTo ( infectee )
 		}
 		else {
 			label = ""

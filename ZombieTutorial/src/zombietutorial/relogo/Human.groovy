@@ -32,7 +32,7 @@ class Human extends ReLogoTurtle {
 
 		if ( infected ){
 			infectionTime ++
-			if ( infectionTime >= 5){
+			if ( infectionTime >=  gestationPeriod){
 				hatchZombies (1){ size = 2 }
 				die ()
 			}
